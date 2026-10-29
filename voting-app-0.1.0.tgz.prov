@@ -1,0 +1,52 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: "1.0"
+dependencies:
+- - name: vote
+  repository: ""
+  version: 0.1.0
+- - name: result
+  repository: ""
+  version: 0.1.0
+- - name: worker
+  repository: ""
+  version: 0.1.0
+- - condition: redis.enabled
+  name: redis
+  repository: ""
+  version: 0.1.0
+- - condition: db.enabled
+  import-values:
+  - child: service
+    parent: dbService
+  name: db
+  repository: ""
+  version: 0.1.0
+description: Production-grade voting app (vote, result, worker, redis, postgres)
+name: voting-app
+type: application
+version: 0.1.0
+
+...
+files:
+  voting-app-0.1.0.tgz: sha256:0c3d6a178e9a3a669e5c4cd2b2cd1f547e360322a9d26dbb86df36ecfa0a5a2a
+
+-----BEGIN PGP SIGNATURE-----
+
+wsG5BAEBCgBtBYJq44o+CRCAzgAU4h9wa0UUAAAAAAAcACBzYWx0QG5vdGF0aW9u
+cy5vcGVucGdwanMub3JnJrIkRB5ysrmJM02UdCMi2jNIT3IJUrbAaGNBtEl/w2cW
+IQTiTP8SoM6ZhhDEp6SAzgAU4h9wawAAHRgP/0u+CjseRYPZ6fSAhfqCwdCTBMxv
+/D5wYWylkTUPwjjp5Qy4E5UHW37YmMvNFtBISbZ031OFfz4taRCQNWGQPnC1dOQA
+LCVKo4jUU+7PkxeMkgvI37I+5EcoHNHwD8STncWSLalLEYKnlB+46O/ZZYTTdgzG
+/NU4tMy1R2eL8xj/7abi0nTBWeZ/NSDguFDEclbwX+Sc2h3NZYWxa3rgnwHqwrv2
+4WxMC2m/vUudSHTQgaMVIi8i3BGX292rpwxHgZfY04tqWFl4jJ5n+h/HfwiaQSXA
+z2azmma284TN3hYpZ6nEk6/wsI8upKuwdYhX9+ejnFyjlEa+0c8Ns2nRIbvyuv3m
+r1XZmIY8TZ0Pv5zQkePkBK5yvhGLqBD1P/1lPYFSP95ZwnJpCWjGAFIj29Vv/pt9
+zUue1M9oamOW1rrjF1iIPxL5kCh8W75YObUzKpOScNO0nVlrDjcuIRxzibWZtFni
+C/OJKyxvMgeBvV/EcqK3cm2V1rfa/ihnqEuExUtU6hMTfQLNAL+9HFwFrLja4xpY
+odWQpVG8F0JK0Up59PVFoczeQX+PfN6jIFfYem1eqZLqrvf+HDHKXclUsRn06ivN
+EsyOb+r35K+0+gXk15ruBwhTLQM1BkhRgapIgWtM1TkM9TuoBnyV43rJ542iY7mC
+U6Lsy5h4p0nDLB20
+-----END PGP SIGNATURE-----

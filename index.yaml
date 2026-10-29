@@ -1,0 +1,35 @@
+apiVersion: v1
+entries:
+  voting-app:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2026-10-30T00:44:16.8192259+05:00"
+    dependencies:
+    - name: vote
+      repository: ""
+      version: 0.1.0
+    - name: result
+      repository: ""
+      version: 0.1.0
+    - name: worker
+      repository: ""
+      version: 0.1.0
+    - condition: redis.enabled
+      name: redis
+      repository: ""
+      version: 0.1.0
+    - condition: db.enabled
+      import-values:
+      - child: service
+        parent: dbService
+      name: db
+      repository: ""
+      version: 0.1.0
+    description: Production-grade voting app (vote, result, worker, redis, postgres)
+    digest: 0c3d6a178e9a3a669e5c4cd2b2cd1f547e360322a9d26dbb86df36ecfa0a5a2a
+    name: voting-app
+    type: application
+    urls:
+    - https://usama-tauqir.github.io/helm-charts/voting-app-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-10-30T00:44:16.806643+05:00"
